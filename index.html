@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kashikoi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header id="header">
+    <div id="title">
+      <h1 id="kashikoi">Kashikoi</h1>
+    </div>
+  </header>
+
+  <div class="hamburger-menu">
+    <input id="menu-toggle" type="checkbox" onclick="overlay()" />
+    <label class="menu-btn" for="menu-toggle">
+      <span></span>
+    </label>
+    <ul class="menu-box">
+      <li><a class="menu-item" href="#">Configuração</a></li>
+      <li><a class="menu-item" href="#">Histórico</a></li>
+      <li><a class="menu-item" href="#">Contato</a></li>
+    </ul>
+  </div>
+
+  <div id="overlay"></div>
+
+  <p>
+    Bem-vindo ao Kashikoi! Nosso objetivo é tornar a matemática mais acessível e envolvente para alunos do 1º e 2º ano
+    do ensino médio. Aqui, você encontrará recursos práticos e explicações claras sobre equações matemáticas, projetados
+    para ajudar a entender conceitos com facilidade e confiança. Explore nosso site e descubra como podemos ajudar você
+    a superar desafios e a se destacar nos estudos. Vamos juntos transformar a matemática em uma experiência
+    gratificante e inspiradora!
+  </p>
+
+  <p>
+    Em qual ano do ensino médio você está?
+  </p>
+
+  <div class="dropdown">
+    <button class="dropbtn">Selecionar</button>
+    <div class="dropdown-content">
+      <a href="#">1º Ano</a>
+      <a href="#">2º Ano</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <p>
+    <strong>Nota:</strong> o site está em fase de desenvolvimento, então pedimos sua paciência caso algo não esteja
+    funcionando corretamente.
+  </p>
+
+</body>
+
+</html>
