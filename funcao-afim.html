@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Função Afim</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="style1.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="jqmath-0.4.3.css">
+	</head>
+	<body>
+		<header id="header">
+			<div id="title">
+				<h1 id="kashikoi"><a href="/index.html">Kashikoi</a></h1>
+			</div>
+		</header>
+
+		<div class="hamburger-menu">
+			<input id="menu-toggle" type="checkbox" onclick="overlay()" />
+			<label class="menu-btn" for="menu-toggle">
+				<span></span>
+			</label>
+			<ul class="menu-box">
+				<li><a class="menu-item" href="#">Configuração</a></li>
+				<li><a class="menu-item" href="#">Histórico</a></li>
+				<li><a class="menu-item" href="#">Contato</a></li>
+			</ul>
+		</div>
+
+		<div id="overlay"></div>
+
+		<div class="sidenav">
+			<a id="funcao-afim" href="funcao-afim.html">Função afim</a>
+			<a id="funcao-quadratica" href="#">Função quadrática</a>
+			<a id="funcao-modular" href="#">Função modular</a>
+			<a id="funcao-exponencial" href="#">Função exponecial</a>
+			<a id="funcao-logaritmica" href="#">Função logarítmica</a>
+		</div>
+
+		<div class="main">
+      <div id="function">
+			  <label for="box-fx">Digite os valores de $x$, $a$ e $b$:<br><br>$f($</label>
+			  <input type="text" id="box-fx" placeholder="x" max-length="5"/>
+			
+		  	<label for="box-a">$)=$</label>
+  			<input type="text" id="box-a" placeholder="a" max-length="5"/>
+			
+  			<label for="box-b">$x+$</label>
+	  		<input type="text" id="box-b" placeholder="b" max-length="5"/>
+      </div>
+			
+			<button id="function-btn" onclick="calcFunc()">Calcular</button>
+			
+			<div id="graphics" style="width: 100%; max-width: 700px"></div>
+			
+			<p id="board">
+			  <div id="resolution">
+			  </div>
+				<!-- Vou decidir o que pôr aqui depois -->
+			</p>
+		</div>
+
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script>
+    function calcFunc() {
+        funcAfim = [
+            document.getElementById("box-fx").value, 
+            document.getElementById("box-a").value, 
+            document.getElementById("box-b").value
+        ];
+        
+        try {
+            var y = Number(funcAfim[1]) * Number(funcAfim[0]) + Number(funcAfim[2]);
+            var y2 = (Number(funcAfim[1]) * 2) * Number(funcAfim[0]) + Number(funcAfim[2]);
+        } catch(err) {
+            alert("Por favor, digite apenas números!");
+        };
+        
+        var trace = {
+            x: [Number(funcAfim[0]), (Number(funcAfim[1]) * 2)],
+            y: [y, y2],
+            type: 'scatter'
+        };
+
+        var data = [trace];
+
+        Plotly.newPlot("graphics", data);
+        
+        // Inserir o conteúdo matemático na div
+        const resolution = document.getElementById("resolution");
+        resolution.innerHTML = "A equação da função é: \\(f(" + funcAfim[0] + ") = " + funcAfim[1] + "x + " + funcAfim[2] + "\\)";
+        
+        jqMath.parseMath(resolution);
+
+        console.log(funcAfim);
+    }
+</script>
+
+    <script src="jquery-1.4.3.min.js"></script>
+  	<script src="jqmath-etc-0.4.6.min.js" charset="utf-8"></script>
+
+		<script src="script.js"></script>
+	</body>
+</html>

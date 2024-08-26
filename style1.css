@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Dutch 801 Italic";
+    src: url("dutch-801-italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   color: black;
@@ -5,6 +12,36 @@ body {
   font-size: 17px;
   text-align: center;
   margin: 0;
+}
+
+.sidenav {
+  white-space: nowrap;
+  overflow: auto;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 90px;
+  background-color: #006D77;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.main {
+  position: relative;
+  top: 50px;
+}
+
+.sidenav a {
+  padding: 14px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.sidenav a:hover {
+  transition-duration: .25s;
+  background-color: #83C5BE;
+  color: black;
 }
 
 #header {
@@ -19,7 +56,7 @@ body {
 
 #kashikoi a {
   vertical-align: middle;
-  line-height: 45px; 
+  line-height: 45px;
   font-size: 35px;
   color: white;
   font-family: "Paytone One", sans-serif;
@@ -36,25 +73,71 @@ body {
   opacity: 0;
 }
 
-#menu-toggle:checked + .menu-btn > span {
+#menu-toggle:checked+.menu-btn>span {
   transform: rotate(45deg);
   background-color: #006D77;
 }
 
-#menu-toggle:checked + .menu-btn > span::after {
+#menu-toggle:checked+.menu-btn>span::after {
   top: 0;
   transform: rotate(0deg);
   background-color: #006D77;
 }
 
-#menu-toggle:checked + .menu-btn > span::before {
+#menu-toggle:checked+.menu-btn>span::before {
   top: 0;
   transform: rotate(90deg);
   background-color: #006D77;
 }
 
-#menu-toggle:checked ~ .menu-box {
+#menu-toggle:checked~.menu-box {
   right: 0 !important;
+}
+
+#box-fx,
+#box-a, 
+#box-b {
+  height: 30px;
+  width: 30px;
+  border: 2px solid #006D77;
+}
+
+#function {
+  position: relative;
+}
+
+#function-btn {
+  top: 20px;
+  position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  border: 2px solid #006D77;
+  background-color: white;
+  color: #006D77;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+ 
+#function-btn:active {
+  background-color: #006D77;
+  color: white;
+}
+
+#graphics {
+  top: 40px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#resolution {
+  font-family: "Dutch 801 Italic";
+}
+
+input,
+input::placeholder {
+  text-align: center;
+  font-family: "Dutch 801 Italic";
+  font-size: 17px;
 }
 
 .menu-btn {
@@ -67,9 +150,9 @@ body {
   z-index: 4;
 }
 
-.menu-btn > span,
-.menu-btn > span::before,
-.menu-btn > span::after {
+.menu-btn>span,
+.menu-btn>span::before,
+.menu-btn>span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -78,11 +161,12 @@ body {
   transition-duration: .25s;
 }
 
-.menu-btn > span::before {
+.menu-btn>span::before {
   content: '';
   top: -8px;
 }
-.menu-btn > span::after {
+
+.menu-btn>span::after {
   content: '';
   top: 8px;
 }
@@ -113,6 +197,7 @@ body {
   text-decoration: none;
   transition-duration: .25s;
 }
+
 .menu-item:hover {
   background-color: #83C5BE;
 }
@@ -147,58 +232,5 @@ body {
 }
 
 p {
-  padding: 0 20px;
-}
-
-.dropbtn {
-  font-family: "Josefin Sans", sans-serif;
-  padding: 12px 16px;
-  margin: auto;
-  width: 300px;
-  color: #006D77;
-  border: 2px solid #006D77;
-  font-size: 17px;
-  cursor: pointer;
-  background-color: white;
-  position: relative;
-  z-index: 2;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 230ms ease-in-out, transform 150ms ease-in-out;
-  position: absolute;
-  background-color: #006D77;
-  min-width: 300px;
-  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  font-family: "Josefin Sans", sans-serif;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  transition-duration: .25s;
-  background-color: #83C5BE;
-}
-
-.dropdown:hover .dropdown-content {
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.dropdown:hover .dropbtn {
-  color: white;
-  background-color: #006D77;
+  padding: 20px;
 }
