@@ -266,11 +266,11 @@ input::placeholder {
   text-decoration-color: #83C5BE;
 }
 
-#sec-part a::after {
-  padding-left: 5%;
+/*#sec-part a::after {
+  padding-left: 1%;
   content: url("https://i.postimg.cc/XNPgLYxz/arrow-up-right-from-square.png");
   zoom: 12%;
-}
+}*/
 
 footer a {
   color: #EDF6F9;
