@@ -48,7 +48,7 @@ body {
 }
 
 .main > * {
-  margin: 15px;
+  margin: 15px 5%;
 }
 
 .main > footer {
@@ -141,6 +141,10 @@ header {
 #graphics {
   position: relative;
   margin: 15px auto 15px auto;
+}
+
+div.plotly-notifier {
+  visibility: hidden;
 }
 
 input {

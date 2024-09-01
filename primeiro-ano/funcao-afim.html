@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,6 +38,19 @@
         });
     });
 </script>
+
+<style>
+  @font-face {
+    font-family: "KaTeX";
+    src: url("KaTeX_Math-Regular.ttf");
+}
+
+  @font-face {
+    font-family: "KaTeX Numbers";
+    src: url("KaTeX_Main-Regular.ttf");
+  }
+  
+</style>
 	</head>
 	
 	<!-- Cabeçalho do site -->
@@ -89,10 +102,10 @@
         <h1>Gráfico da função conhecidos os coeficientes</h1>
 			  Digite os valores de $a$ e $b$:<br><br>
 		  	<label for="box-a">$f(x)=$</label>
-  			<input type="text" id="box-a" value="-6" placeholder="a" max-length="5"/>
+  			<input type="text" id="box-a" placeholder="a" max-length="5"/>
 			
   			<label for="box-b">$x+$</label>
-	  		<input type="text" id="box-b" value="9" placeholder="b" max-length="5"/>
+	  		<input type="text" id="box-b" placeholder="b" max-length="5"/>
       </div>
 			
 			<button id="function-btn" onclick="calcFunc()">Calcular</button>
@@ -122,10 +135,37 @@
           let data = [{
             x: xValues, 
             y: yValues, 
-            mode: "lines"
+            mode: "lines",
+            line: {
+              color: "#83C5BE"
+            }
           }];
           
-          Plotly.newPlot("graphics", data);
+          let layout = {
+            title: {
+              text: "f(x) = - 6 + 9",
+              font: {
+                family: "KaTeX, KaTeX Numbers",
+                size: 20,
+                color: "black"
+              }
+            },
+            
+            xaxis: {
+                title: "Eixo x",
+                titlefont: {
+                  family: "KaTeX"
+                }
+              },
+            yaxis: {
+              title: "Eixo y",
+              titlefont: {
+              family: "KaTeX"
+              }
+            }
+          };
+          
+          Plotly.newPlot("graphics", data, layout, {scrollZoom: true}, {staticPlot: true});
     
     function calcFunc() {
         funcAfim = [
@@ -146,10 +186,47 @@
           const data = [{
             x: xValues, 
             y: yValues, 
-            mode: "lines"
+            mode: "lines",
+            line: {
+              color: "#83C5BE"
+            }
           }];
           
-          Plotly.newPlot("graphics", data);
+          if (funcAfim[0] >= 0 && funcAfim[1] >= 0) {
+            var exp = `f(x) = ${funcAfim[0]} + ${funcAfim[1]}`;
+          } else if (funcAfim[0] < 0 && funcAfim[1] >= 0){
+            var exp = `f(x) = ${funcAfim[0].split("").join(" ")} + ${funcAfim[1]}`;
+          } else if (funcAfim[0] >= 0 && funcAfim[1] < 0) {
+            var exp = `f(x) = ${funcAfim[0]} ${funcAfim[1].split("").join(" ")}`;
+          } else {
+            var exp = `f(x) = ${funcAfim[0].split("").join(" ")} ${funcAfim[1].split("").join(" ")}`
+          };
+          
+          const layout = {
+            title: {
+              text: exp,
+              font: {
+                family: "KaTeX, KaTeX Numbers",
+                size: 20,
+                color: "black"
+              }
+            },
+            
+            xaxis: {
+                title: "Eixo x",
+                titlefont: {
+                  family: "KaTeX"
+                }
+              },
+            yaxis: {
+              title: "Eixo y",
+              titlefont: {
+              family: "KaTeX"
+              }
+            }
+          };
+          
+          Plotly.newPlot("graphics", data, layout, {scrollZoom: true}, {staticPlot: true});
         } catch(err) {
           alert("Coloque apenas números. E lembre-se de não deixar espaços em branco!");
         };
