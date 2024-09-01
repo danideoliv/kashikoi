@@ -1,8 +1,11 @@
 @font-face {
-    font-family: "Dutch 801 Italic";
-    src: url("dutch-801-italic.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+    font-family: "KaTeX";
+    src: url("KaTeX_Math-Regular.ttf");
+}
+
+@font-face {
+    font-family: "KaTeX Numbers";
+    src: url("KaTeX_Main-Regular.ttf");
 }
 
 body {
@@ -22,13 +25,8 @@ body {
   z-index: 1;
   top: 90px;
   background-color: #006D77;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
   cursor: pointer;
-}
-
-.main {
-  position: relative;
-  top: 50px;
 }
 
 .sidenav a {
@@ -44,24 +42,27 @@ body {
   color: black;
 }
 
-#header {
+.main {
+  position: relative;
+  background-color: #EDF6F9;
+  top: 25px;
+}
+
+.main > * {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+header {
   position: sticky;
   top: 0;
   height: 90px;
   display: flex;
   background-color: #006D77;
-  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.2);
   z-index: 3;
-}
-
-#kashikoi a {
-  vertical-align: middle;
-  line-height: 45px;
-  font-size: 35px;
-  color: white;
-  font-family: "Paytone One", sans-serif;
-  font-style: normal;
-  text-decoration: none;
 }
 
 .hamburger-menu {
@@ -73,24 +74,24 @@ body {
   opacity: 0;
 }
 
-#menu-toggle:checked+.menu-btn>span {
+#menu-toggle:checked + .menu-btn > span {
   transform: rotate(45deg);
   background-color: #006D77;
 }
 
-#menu-toggle:checked+.menu-btn>span::after {
+#menu-toggle:checked + .menu-btn > span::after {
   top: 0;
   transform: rotate(0deg);
   background-color: #006D77;
 }
 
-#menu-toggle:checked+.menu-btn>span::before {
+#menu-toggle:checked + .menu-btn > span::before {
   top: 0;
   transform: rotate(90deg);
   background-color: #006D77;
 }
 
-#menu-toggle:checked~.menu-box {
+#menu-toggle:checked ~ .menu-box {
   right: 0 !important;
 }
 
@@ -129,14 +130,15 @@ body {
   margin: 0 auto;
 }
 
-#resolution {
-  font-family: "Dutch 801 Italic";
+input {
+  text-align: center;
+  font-family: "KaTeX Numbers";
+  font-size: 17px;
 }
 
-input,
 input::placeholder {
   text-align: center;
-  font-family: "Dutch 801 Italic";
+  font-family: "KaTeX";
   font-size: 17px;
 }
 
@@ -150,9 +152,9 @@ input::placeholder {
   z-index: 4;
 }
 
-.menu-btn>span,
-.menu-btn>span::before,
-.menu-btn>span::after {
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -161,12 +163,12 @@ input::placeholder {
   transition-duration: .25s;
 }
 
-.menu-btn>span::before {
+.menu-btn > span::before {
   content: '';
   top: -8px;
 }
 
-.menu-btn>span::after {
+.menu-btn > span::after {
   content: '';
   top: 8px;
 }
@@ -216,9 +218,16 @@ input::placeholder {
 }
 
 #title {
-  left: 30px;
+  left: 10px;
   position: relative;
   animation: titlemove 1s;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 62.5px;
+  width: 250px;
 }
 
 @keyframes titlemove {
@@ -227,10 +236,38 @@ input::placeholder {
   }
 
   to {
-    left: 30px;
+    left: 10px;
   }
 }
 
-p {
-  padding: 20px;
+/* Vou tentar colocar :hover mais tarde */
+
+#sec-part a,
+#sec-part:visited {
+  font-size: 13px;
+  color: black;
+  text-decoration-color: #83C5BE;
+}
+
+#sec-part a::after {
+  padding-left: 5px;
+  content: image-set("/images/arrow-up-right-from-square.png" 7x);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  height: 120px;
+  background-color: #006D77;
+}
+
+footer a {
+  color: #EDF6F9;
+  text-decoration-color: #83C5BE;
+}
+
+footer a:visited {
+  color: #EDF6F9;
 }
