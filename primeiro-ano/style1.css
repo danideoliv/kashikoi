@@ -267,8 +267,9 @@ input::placeholder {
 }
 
 #sec-part a::after {
-  padding-left: 5px;
-  content: image-set("/images/arrow-up-right-from-square.png" 7x);
+  padding-left: 5%;
+  content: url("https://i.postimg.cc/XNPgLYxz/arrow-up-right-from-square.png");
+  zoom: 12%;
 }
 
 footer a {
