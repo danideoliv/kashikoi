@@ -44,16 +44,31 @@ body {
 
 .main {
   position: relative;
-  background-color: #EDF6F9;
   top: 25px;
 }
 
 .main > * {
-  padding: 20px;
+  margin: 15px;
+}
+
+.main > footer {
+  position: absolute;
+  width: 100%;
+  margin: 15px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  height: 60px;
+  background-color: #006D77;
+  padding: 20px 0;
 }
 
 h1 {
-  font-size: 25px;
+  color: #006D77;
+  font-family: "Paytone One";
+  font-size: 23px;
 }
 
 header {
@@ -108,7 +123,6 @@ header {
 }
 
 #function-btn {
-  top: 20px;
   position: relative;
   font-family: "Josefin Sans", sans-serif;
   border: 2px solid #006D77;
@@ -125,9 +139,8 @@ header {
 }
 
 #graphics {
-  top: 40px;
   position: relative;
-  margin: 0 auto;
+  margin: 15px auto 15px auto;
 }
 
 input {
@@ -252,15 +265,6 @@ input::placeholder {
 #sec-part a::after {
   padding-left: 5px;
   content: image-set("/images/arrow-up-right-from-square.png" 7x);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  height: 120px;
-  background-color: #006D77;
 }
 
 footer a {

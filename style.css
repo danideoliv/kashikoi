@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap');
+
+.lora--quote {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   color: black;
@@ -26,8 +35,28 @@ header {
   text-decoration: none;
 }
 
-.content > * {
-  padding: 2px 20px;
+.main > * {
+  margin: 15px;
+}
+
+.main > footer {
+  width: 100%;
+  position: absolute;
+  margin: 15px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  height: 60px;
+  background-color: #006D77;
+  padding: 20px 0;
+}
+
+h1 {
+  color: #006D77;
+  font-family: "Paytone One";
+  font-size: 23px;
 }
 
 .hamburger-menu {
@@ -210,13 +239,14 @@ header {
   background-color: #006D77;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: white;
-  height: 120px;
-  background-color: #006D77;
+/* Vou colocar uma animação maneira */
+
+#quotation {
+  margin-top: 30px;
+  font-family: "Lora";
+  font-size: 20px;
+  text-align: justify;
+  padding-bottom: 15%;
 }
 
 footer a {
