@@ -9,8 +9,8 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: #0F2D40;
   font-size: 17px;
   text-align: center;
   margin: 0;
@@ -21,18 +21,8 @@ header {
   top: 0;
   height: 90px;
   display: flex;
-  background-color: #006D77;
+  background-color: #0F2D40;
   z-index: 3;
-}
-
-#kashikoi a {
-  vertical-align: middle;
-  line-height: 45px; 
-  font-size: 35px;
-  color: white;
-  font-family: "Paytone One", sans-serif;
-  font-style: normal;
-  text-decoration: none;
 }
 
 .main > * {
@@ -40,148 +30,55 @@ header {
 }
 
 .main > p {
+  line-height: 30px;
   text-align: justify;
+}
+
+.main > hr {
+  margin: 0;
 }
 
 .main > footer {
   width: 100%;
   position: absolute;
-  margin: 15px 0;
+  margin: 0;
   font-size: 15px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   color: white;
   height: 60px;
-  background-color: #006D77;
   padding: 20px 0;
 }
 
 h1 {
-  color: #006D77;
-  font-family: "Paytone One";
-  font-size: 23px;
+  color: white;
+  font-family: "Hammersmith One";
+  font-size: 25px;
+}
+
+hr {
+  margin: 0;
+  border: 1px solid #194759;
 }
 
 #question-center {
   text-align: center;
 }
 
-.hamburger-menu {
-  position: relative;
-  z-index: 4;
-}
-
-#menu-toggle {
-  opacity: 0;
-}
-
-#menu-toggle:checked + .menu-btn > span {
-  transform: rotate(45deg);
-  background-color: #006D77;
-}
-
-#menu-toggle:checked + .menu-btn > span::after {
-  top: 0;
-  transform: rotate(0deg);
-  background-color: #006D77;
-}
-
-#menu-toggle:checked + .menu-btn > span::before {
-  top: 0;
-  transform: rotate(90deg);
-  background-color: #006D77;
-}
-
-#menu-toggle:checked ~ .menu-box {
-  right: 0 !important;
-}
-
-.menu-btn {
-  position: fixed;
-  top: 43px;
-  right: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 4;
-}
-
-.menu-btn > span,
-.menu-btn > span::before,
-.menu-btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transition-duration: .25s;
-}
-
-.menu-btn > span::before {
-  content: '';
-  top: -8px;
-}
-
-.menu-btn > span::after {
-  content: '';
-  top: 8px;
-}
-
-.menu-box {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  background-color: #EDF6F9;
-  transition-duration: .25s;
-  z-index: 3;
-}
-
-.menu-item {
-  display: block;
-  padding: 12px 24px;
-  color: black;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-
-.menu-item:hover {
-  background-color: #83C5BE;
-}
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition-duration: .25s;
-  cursor: pointer;
-  z-index: 3;
-}
-
 #title {
   left: 10px;
+  top: 50%;
+  margin-top: -32px;
   position: relative;
   animation: titlemove 1s;
-  display: flex;
-  align-items: center;
+  width: 64px;
+  height: 64px;
 }
 
 #logo {
-  height: 62.5px;
-  width: 250px;
+  height: 64px;
+  width: 64px;
 }
 
 @keyframes titlemove {
@@ -194,18 +91,46 @@ h1 {
   }
 }
 
+#drop-slct div {
+  display: inline-block;
+}
+
 .dropbtn {
-  font-family: "Josefin Sans", sans-serif;
-  padding: 12px 16px;
-  margin: auto;
-  width: 300px;
-  color: #006D77;
-  border: 2px solid #006D77;
-  font-size: 17px;
+  top: 50%;
+  margin-top: -15px;
+  margin-left: 20px;
+  border-image: linear-gradient(to left, #194759 0%, #3E8C84 100%) 1;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #0F2D40;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  background-color: white;
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.drop-option {
+  font-family: "Josefin Sans", sans-serif;
+  padding: 12px 0;
+  margin: auto;
+  width: 200px;
+  color: white;
+  font-size: 17px;
+  background-color: #0F2D40;
   position: relative;
-  z-index: 2;
+}
+
+.drop-option::before {
+  background-image: linear-gradient(to right, #194759 0%, #3E8C84 100%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  z-index: -1;
 }
 
 .dropdown {
@@ -214,13 +139,24 @@ h1 {
 }
 
 .dropdown-content {
+  visibility: hidden;
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 230ms ease-in-out, transform 150ms ease-in-out;
+  transition: opacity 230ms ease-in-out, transform 150ms ease-in-out, visibility 0ms 250ms;
   position: absolute;
-  background-color: #006D77;
-  min-width: 300px;
-  z-index: 1;
+  width: 200px;
+}
+
+.dropdown-content::before {
+  background-image: linear-gradient(to right, #194759 0%, #3E8C84 100%);
+  content: "";
+  height: calc(100% - 4px);
+  width: 100%;
+  padding: 4px;
+  top: 0;
+  left: -4px;
+  position: absolute;
+  z-index: -1;
 }
 
 .dropdown-content a {
@@ -229,39 +165,35 @@ h1 {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  background-color: #0F2D40;
+  cursor: pointer;
 }
 
 .dropdown-content a:hover {
   transition-duration: .25s;
-  background-color: #83C5BE;
-  color: black;
+  background-color: #194759;
 }
-
-.dropdown:hover .dropdown-content {
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.dropdown:hover .dropbtn {
-  color: white;
-  background-color: #006D77;
-}
-
-/* Vou colocar uma animação maneira */
 
 #quotation {
-  margin-top: 30px;
+  border-image: linear-gradient(to bottom, #194759 0%, #3E8C84 100%) 1;
+  border-width: 4px;
+  border-style: solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+  margin-top: 5%;
   font-family: "Lora";
   font-size: 20px;
   text-align: justify;
-  padding-bottom: 15%;
+  margin-bottom: 15%;
+  padding: 0 20px;
 }
 
 footer a {
-  color: #EDF6F9;
-  text-decoration-color: #83C5BE;
+  color: #D8F2F0;
+  text-decoration-color: #B9D4D0;
 }
 
 footer a:visited {
-  color: #EDF6F9;
+  color: #D8F2F0;
 }

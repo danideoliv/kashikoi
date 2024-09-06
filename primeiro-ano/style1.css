@@ -11,26 +11,28 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   color: black;
-  background-color: white;
+  background-color: #0F2D40;
+  color: white;
   font-size: 17px;
   text-align: center;
   margin: 0;
 }
 
 .sidenav {
+  border-top: 1.5px solid #194759;
+  border-bottom: 1.5px solid #194759;
   white-space: nowrap;
   overflow: auto;
   width: 100%;
   position: fixed;
-  z-index: 1;
   top: 90px;
-  background-color: #006D77;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: #0F2D40;
   cursor: pointer;
 }
 
 .sidenav a {
-  padding: 14px;
+  padding: 10px 14px;
   text-decoration: none;
   color: white;
   display: inline-block;
@@ -38,37 +40,44 @@ body {
 
 .sidenav a:hover {
   transition-duration: .25s;
-  background-color: #83C5BE;
-  color: black;
+  background-color: #296B73;
+  color: white;
 }
 
 .main {
   position: relative;
-  top: 25px;
+  top: 40px;
 }
 
 .main > * {
   margin: 15px 5%;
 }
 
+.main > p {
+  line-height: 30px;
+}
+
 .main > footer {
   position: absolute;
   width: 100%;
-  margin: 15px 0;
+  margin: 0;
   font-size: 15px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   color: white;
   height: 60px;
-  background-color: #006D77;
   padding: 20px 0;
 }
 
+.main > hr {
+  margin: 0;
+}
+
 h1 {
-  color: #006D77;
-  font-family: "Paytone One";
-  font-size: 23px;
+  color: #296B73;
+  font-family: "Hammersmith One";
+  font-size: 20px;
 }
 
 header {
@@ -76,46 +85,35 @@ header {
   top: 0;
   height: 90px;
   display: flex;
-  background-color: #006D77;
+  background-color: #0F2D40;
   z-index: 3;
 }
 
-.hamburger-menu {
-  position: relative;
-  z-index: 4;
+hr {
+  margin: 0;
+  border: 1px solid #194759;
 }
 
-#menu-toggle {
-  opacity: 0;
-}
-
-#menu-toggle:checked + .menu-btn > span {
-  transform: rotate(45deg);
-  background-color: #006D77;
-}
-
-#menu-toggle:checked + .menu-btn > span::after {
-  top: 0;
-  transform: rotate(0deg);
-  background-color: #006D77;
-}
-
-#menu-toggle:checked + .menu-btn > span::before {
-  top: 0;
-  transform: rotate(90deg);
-  background-color: #006D77;
-}
-
-#menu-toggle:checked ~ .menu-box {
-  right: 0 !important;
-}
-
-#box-fx,
-#box-a, 
-#box-b {
+.box {
   height: 30px;
   width: 30px;
-  border: 2px solid #006D77;
+  border-image: linear-gradient(to right, #194759 0%, #3E8C84 100%) 1;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #0F2D40;
+  color: white;
+}
+
+.box::placeholder {
+  color: white;
+}
+
+.box:focus {
+  outline: none;
+}
+
+:focus::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 #function {
@@ -125,17 +123,18 @@ header {
 #function-btn {
   position: relative;
   font-family: "Josefin Sans", sans-serif;
-  border: 2px solid #006D77;
-  background-color: white;
-  color: #006D77;
   font-size: 15px;
   padding: 10px;
   cursor: pointer;
+  border-image: linear-gradient(to right, #194759 0%, #3E8C84 100%) 1;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #0F2D40;
+  color: white;
 }
  
 #function-btn:active {
-  background-color: #006D77;
-  color: white;
+  background-color: #194759;
 }
 
 #graphics {
@@ -159,92 +158,19 @@ input::placeholder {
   font-size: 17px;
 }
 
-.menu-btn {
-  position: fixed;
-  top: 43px;
-  right: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 4;
-}
-
-.menu-btn > span,
-.menu-btn > span::before,
-.menu-btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transition-duration: .25s;
-}
-
-.menu-btn > span::before {
-  content: '';
-  top: -8px;
-}
-
-.menu-btn > span::after {
-  content: '';
-  top: 8px;
-}
-
-.menu-box {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  background-color: #EDF6F9;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  transition-duration: .25s;
-  z-index: 3;
-}
-
-.menu-item {
-  display: block;
-  padding: 12px 24px;
-  color: black;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-
-.menu-item:hover {
-  background-color: #83C5BE;
-}
-
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition-duration: .25s;
-  cursor: pointer;
-  z-index: 3;
-}
-
 #title {
   left: 10px;
+  top: 50%;
+  margin-top: -32px;
   position: relative;
   animation: titlemove 1s;
-  display: flex;
-  align-items: center;
+  width: 64px;
+  height: 64px;
 }
 
 #logo {
-  height: 62.5px;
-  width: 250px;
+  height: 64px;
+  width: 64px;
 }
 
 @keyframes titlemove {
@@ -262,21 +188,15 @@ input::placeholder {
 #sec-part a,
 #sec-part:visited {
   font-size: 13px;
-  color: black;
-  text-decoration-color: #83C5BE;
+  color: #D8F2F0;
+  text-decoration-color: #B9D4D0;
 }
 
-/*#sec-part a::after {
-  padding-left: 1%;
-  content: url("https://i.postimg.cc/XNPgLYxz/arrow-up-right-from-square.png");
-  zoom: 12%;
-}*/
-
 footer a {
-  color: #EDF6F9;
-  text-decoration-color: #83C5BE;
+  color: #D8F2F0;
+  text-decoration-color: #B9D4D0;
 }
 
 footer a:visited {
-  color: #EDF6F9;
+  color: #D8F2F0;
 }

@@ -5,77 +5,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Kashikoi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet">
+  rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="icon" href="/images/Kashikoi_20240828_163023_0000.svg">
+  <link rel="icon" href="001-summation.png">
+  <script src="https://kit.fontawesome.com/6450feb693.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
     <div id="title">
       <a href="index.html">
-        <img id="logo" src="https://i.postimg.cc/V6YKxZbZ/Kashikoi-20240828-160733-0000.png">
+        <img id="logo" src="001-summation.png">
       </a>
     </div>
   </header>
 
-  <div class="hamburger-menu">
-    <input id="menu-toggle" type="checkbox" onclick="overlay()" />
-    <label class="menu-btn" for="menu-toggle">
-      <span></span>
-    </label>
-    <ul class="menu-box">
-      <li><a class="menu-item" href="#">Configuração</a></li>
-      <li><a class="menu-item" href="#">Histórico</a></li>
-      <li><a class="menu-item" href="#">Contato</a></li>
-    </ul>
-  </div>
-
-  <div id="overlay"></div>
+  <hr>
 
   <div class="main">
-      <h1>Bem-vindo(a) ao Kashikoi!</h1>
-    
-      <p>
-    Nosso objetivo é tornar a matemática mais acessível e envolvente para alunos do 1º e 2º ano
-    do ensino médio. Aqui, você encontrará recursos práticos e explicações claras sobre equações matemáticas, projetados
-    para ajudar a entender conceitos com facilidade e confiança. Explore nosso site e descubra como podemos ajudar você
-    a superar desafios e a se destacar nos estudos. Vamos juntos transformar a matemática em uma experiência
-    gratificante e inspiradora!
-  </p>
+    <h1>Bem-vindo(a) ao Kashikoi!</h1>
 
-  <p id="question-center">
-    Escolha seu ano do ensino médio:
-  </p>
+    <p>
+      Nosso objetivo é tornar a matemática mais acessível e envolvente para alunos do 1º e 2º ano
+      do ensino médio. Aqui, você encontrará recursos práticos e explicações claras sobre equações matemáticas, projetados
+      para ajudar a entender conceitos com facilidade e confiança. Explore nosso site e descubra como podemos ajudar você
+      a superar desafios e a se destacar nos estudos. Vamos juntos transformar a matemática em uma experiência
+      gratificante e inspiradora!
+    </p>
 
-  <div class="dropdown">
-    <button class="dropbtn">Selecionar</button>
-    <div class="dropdown-content">
-      <a href="primeiro-ano/funcao-afim.html">1º Ano</a>
-      <a href="#">2º Ano</a>
+    <p id="question-center">
+      Escolha seu ano do ensino médio:
+    </p>
+
+    <div class="dropdown">
+      <div id="drop-slct">
+        <div class="drop-option">
+          Selecione
+        </div>
+        <button class="dropbtn" onclick="dropdown()"><i class="fa-solid fa-chevron-down" style="color: white;"></i></button>
+      </div>
+      <div class="dropdown-content">
+        <a id="middle-one" href="primeiro-ano/funcao-afim.html">1º Ano</a>
+        <a href="#">2º Ano</a>
+      </div>
     </div>
-  </div>
-  
-  <h1>Por que o nome "Kashikoi?"</h1>
-  
-  <p>
-    Escolhemos o nome "Kashikoi" porque, em japonês, significa "inteligente" ou "sábio". Esse nome reflete perfeitamente a nossa missão de ajudar estudantes a se tornarem mais confiantes e capazes em matemática, transformando desafios complexos em conquistas intelectuais. Queremos que cada aluno que utiliza nossa plataforma se sinta mais preparado, seguro e inteligente ao lidar com equações e funções, percebendo que a sabedoria vem não apenas de entender a matemática, mas também de aprender a aplicá-la de forma eficaz.
-  </p>
-  
-  <p id="quotation">
-    <q>A matemática é o alfabeto com o qual Deus escreveu o universo.</q>
-    <br>
-    — Pitágoras
-  </p>
-  
+
+    <h1>Por que o nome "Kashikoi?"</h1>
+
+    <p>
+      Escolhemos o nome "Kashikoi" porque, em japonês, significa "inteligente" ou "sábio". Esse nome reflete perfeitamente a nossa missão de ajudar estudantes a se tornarem mais confiantes e capazes em matemática, transformando desafios complexos em conquistas intelectuais. Queremos que cada aluno que utiliza nossa plataforma se sinta mais preparado, seguro e inteligente ao lidar com equações e funções, percebendo que a sabedoria vem não apenas de entender a matemática, mas também de aprender a aplicá-la de forma eficaz.
+    </p>
+
+    <div id="quotation">
+      <p>
+        <q>A matemática é o alfabeto com o qual Deus escreveu o universo.</q>
+        <br>
+        — Pitágoras
+      </p>
+    </div>
+
+    <hr>
+
     <footer>
-    <p>Autor: Daniel Guerra</p>
-    <address>Contato: <a href="mailto:dangue612345@gmail.com">dangue612345@gmail.com</a></address>
-  </footer>
+      <p>
+        Autor: Daniel Guerra
+      </p>
+      <address>Contato: <a href="mailto:dangue612345@gmail.com">dangue612345@gmail.com</a></address>
+    </footer>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 
