@@ -206,26 +206,48 @@
           let exp = `f(x) = ${formatA}x ${formatB}`;
           
           const layout = {
+            paper_bgcolor: "#0F2D40",
+            plot_bgcolor: "#FCFEFE",
             title: {
               text: exp,
               font: {
                 family: "KaTeX, KaTeX Numbers",
                 size: 20,
-                color: "black"
+                color: "white"
               }
             },
             
             xaxis: {
                 title: "Eixo x",
                 titlefont: {
-                  family: "KaTeX"
-                }
+                  family: "KaTeX",
+                  color: "white"
+                },
+                mirror: "ticks",
+                gridcolor: "#0F2D40",
+                zerolinecolor: "#0F2D40",
+                zerolinewidth: 2,
+                tickfont: {
+                  color: "white"
+                },
+                linecolor: "#296B73",
+                linewidth: 4
               },
             yaxis: {
               title: "Eixo y",
               titlefont: {
-              family: "KaTeX"
-              }
+              family: "KaTeX",
+              color: "white",
+              },
+              mirror: "ticks",
+              gridcolor: "#0F2D40",
+              zerolinecolor: "#0F2D40",
+              zerolinewidth: 2,
+              tickfont: {
+                color: "white"
+              },
+              linecolor: "#296B73",
+              linewidth: 4
             }
           };
           

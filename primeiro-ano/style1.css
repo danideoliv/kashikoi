@@ -19,8 +19,8 @@ body {
 }
 
 .sidenav {
-  border-top: 1.5px solid #194759;
-  border-bottom: 1.5px solid #194759;
+  border-top: 2px solid #194759;
+  border-bottom: 2px solid #194759;
   white-space: nowrap;
   overflow: auto;
   width: 100%;
