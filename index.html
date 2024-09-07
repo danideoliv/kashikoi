@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
   rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css">
-  <link rel="icon" href="0">
+  <link rel="icon" href="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
   <script src="https://kit.fontawesome.com/6450feb693.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,12 +40,13 @@
     </p>
 
     <div class="dropdown">
-      <div id="drop-slct">
-        <div class="drop-option">
+      <button class="dropbtn" onclick="dropdown()">
+        <div id="btn-con">
           Selecione
+          <i id="seta-baixo" class="fa-solid fa-chevron-down" style="color: white; padding: 0 5px;"></i>
         </div>
-        <button class="dropbtn" onclick="dropdown()"><i class="fa-solid fa-chevron-down" style="color: white;"></i></button>
-      </div>
+      </button>
+      
       <div class="dropdown-content">
         <a id="middle-one" href="primeiro-ano/funcao-afim.html">1º Ano</a>
         <a href="#">2º Ano</a>

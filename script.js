@@ -8,20 +8,21 @@ function dropdown() {
   visibility: visible;
   `;
 
-  const selectGrade = document.querySelector(".drop-option");
-  const selectBtn = document.querySelector(".dropbtn");
+  const selectGrade = document.querySelector(".dropbtn");
   const dropContent = document.querySelector(".dropdown-content");
+  const arrow = document.querySelector("#seta-baixo");
+  const opacityBtn = document.querySelector("#btn-con");
 
   rotation = switchBtn ? 180 : 0;
 
-  selectBtn.style.transform = `rotate(${rotation}deg)`;
+  arrow.style.transform = `rotate(${rotation}deg)`;
 
   if (switchBtn) {
-    selectGrade.style.color = "rgba(255, 255, 255, 0.4)";
+    opacityBtn.style.cssText = "opacity: 50%";
     dropContent.style.cssText = dropConStyle;
-    document.styleSheets[5].insertRule(".drop-option::before { height: calc(100% - 4px); }", 0);
+    document.styleSheets[5].insertRule(".dropbtn::before { height: calc(100% - 4px); }", 0);
   } else {
-    selectGrade.style.color = "white";
+    opacityBtn.style.cssText = "opacity: 100%";
     dropContent.style.cssText = "visibility: hidden";
     document.styleSheets[5].removeRule(".drop-option::before { height: calc(100% - 4px); }", 0);
   };

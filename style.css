@@ -96,21 +96,6 @@ hr {
 }
 
 .dropbtn {
-  top: 50%;
-  margin-top: -15px;
-  margin-left: 20px;
-  border-image: linear-gradient(to left, #194759 0%, #3E8C84 100%) 1;
-  border-width: 2px;
-  border-style: solid;
-  background-color: #0F2D40;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  position: absolute;
-  transition: transform 0.5s ease;
-}
-
-.drop-option {
   font-family: "Josefin Sans", sans-serif;
   padding: 12px 0;
   margin: auto;
@@ -119,9 +104,11 @@ hr {
   font-size: 17px;
   background-color: #0F2D40;
   position: relative;
+  border: none;
+  cursor: pointer;
 }
 
-.drop-option::before {
+.dropbtn::before {
   background-image: linear-gradient(to right, #194759 0%, #3E8C84 100%);
   content: "";
   width: 100%;
@@ -131,6 +118,14 @@ hr {
   left: -4px;
   position: absolute;
   z-index: -1;
+}
+
+#seta-baixo {
+  transition: transform 0.5s ease;
+}
+
+#btn-con {
+  transition: opacity 0.3s ease;
 }
 
 .dropdown {
