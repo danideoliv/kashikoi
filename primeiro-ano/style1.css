@@ -75,7 +75,7 @@ body {
 }
 
 h1 {
-  color: #296B73;
+  color: #3E8C84;
   font-family: "Hammersmith One";
   font-size: 20px;
 }
@@ -139,7 +139,7 @@ hr {
 
 #graphics {
   position: relative;
-  margin: 15px auto 15px auto;
+  margin: 15px auto;
 }
 
 div.plotly-notifier {
