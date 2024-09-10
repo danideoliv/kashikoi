@@ -63,13 +63,13 @@
 	<body>
 		<header>
 			<div id="title">
-				<a href="/index.html">
+				<a href="../index.html">
           <img id="logo" src="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
         </a>
 			</div>
 		</header>
 
-    <!-- Barra de navegação que muda dependendo do tamanho da tela (não programei a responsividade aunda) -->
+    <!-- Barra de navegação que muda dependendo do tamanho da tela (não programei a responsividade ainda) -->
     
 		<div class="sidenav">
 			<a id="funcao-afim" href="funcao-afim.html">Função afim</a>
@@ -89,23 +89,23 @@
         <h1>Gráfico da função conhecidos os coeficientes</h1>
 			  Digite os valores de $a$ e $b$:<br><br>
 		  	<label for="box-a">$f(x)=$</label>
-  			<input type="text" id="box-a" class="box" placeholder="a" max-length="5"/>
+  			<input type="text" id="box-a" class="box1" placeholder="a" max-length="5"/>
 			
   			<label for="box-b">$x+$</label>
-	  		<input type="text" id="box-b" class="box" placeholder="b" max-length="5"/>
+	  		<input type="text" id="box-b" class="box1" placeholder="b" max-length="5"/>
       </div>
 			
 			<button id="function-btn" onclick="calcFunc()">Calcular</button>
 			
 	  	<div id="graphics" style="width: 100%; max-width: 700px"></div>
 			
-			<p id="sec-part"><a href="#">Coeficientes da função conhecidos dois pontos</a><i class="fa-solid fa-square-arrow-up-right" style= "color: #B9D4D0; padding-left: 5px;"></i></p>
+			<p id="sec-part"><a href="./funcao-afim2.html">Coeficientes da função conhecidos dois pontos</a><i class="fa-solid fa-square-arrow-up-right" style= "color: #296B73; padding-left: 5px;"></i></p>
 			
 			<hr>
 			
 			<footer>
-        <p>Autor: Daniel Guerra</p>
-        <address>Contato: <a href="mailto:dangue612345@gmail.com">dangue612345@gmail.com</a></address>
+        <p><a href="#">Sobre</a></p>
+        <p><a href="mailto:dangue612345@gmail.com">Contato</a></p>
       </footer>
 		</div>
 
@@ -253,6 +253,6 @@
         };
     };
 </script>
-		<script src="script1.js"></script>
+		<script src="script1.js" type="module"></script>
 	</body>
 </html>

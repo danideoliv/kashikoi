@@ -80,6 +80,12 @@ h1 {
   font-size: 20px;
 }
 
+h2 {
+  color: #296B73;
+  font-family: "Hammersmith One";
+  font-size: 18px;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -94,7 +100,7 @@ hr {
   border: 1px solid #194759;
 }
 
-.box {
+.box1 {
   height: 30px;
   width: 30px;
   border-image: linear-gradient(to right, #194759 0%, #3E8C84 100%) 1;
@@ -102,18 +108,45 @@ hr {
   border-style: solid;
   background-color: #0F2D40;
   color: white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
-.box::placeholder {
+.box2 {
+  height: 30px;
+  width: 60px;
+  border-image: linear-gradient(to right, #194759 0%, #3E8C84 100%) 1;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #0F2D40;
+  color: white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+::placeholder
+{
   color: white;
 }
 
-.box:focus {
+:focus {
   outline: none;
 }
 
 :focus::placeholder {
   color: rgba(255, 255, 255, 0.4);
+}
+
+#paperAnswer {
+  border-image: linear-gradient(to right, #194759 0%, #3E8C84 100%) 1;
+  border-width: 4px;
+  border-style: solid;
+  padding: 10px;
+  background-color: #F5F5F5;
+  color: black;
+  max-width: 700px;
 }
 
 #function {
@@ -149,13 +182,13 @@ div.plotly-notifier {
 input {
   text-align: center;
   font-family: "KaTeX Numbers";
-  font-size: 17px;
+  font-size: 20px;
 }
 
 input::placeholder {
   text-align: center;
-  font-family: "KaTeX";
-  font-size: 17px;
+  font-family: "KaTeX Numbers";
+  font-size: 20px;
 }
 
 #title {
@@ -188,15 +221,15 @@ input::placeholder {
 #sec-part a,
 #sec-part:visited {
   font-size: 13px;
-  color: #D8F2F0;
-  text-decoration-color: #B9D4D0;
+  color: white;
+  text-decoration-color: #296B73;
 }
 
 footer a {
-  color: #D8F2F0;
-  text-decoration-color: #B9D4D0;
+  color: white;
+  text-decoration: none;
 }
 
 footer a:visited {
-  color: #D8F2F0;
+  color: white;
 }

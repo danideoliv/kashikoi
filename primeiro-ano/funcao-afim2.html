@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Função Afim - Kashikoi</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="style1.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+		
+		  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+		
+		<script src="https://kit.fontawesome.com/6450feb693.js" crossorigin="anonymous"></script>
+		
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+
+<!-- A parte abaixo é responsável por renderizar os textos matemáticos. Não me atrevo a mexer. Irei deixar os comentários originais do código-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<style>
+  @font-face {
+    font-family: "KaTeX";
+    src: url("KaTeX_Math-Regular.ttf");
+}
+
+  @font-face {
+    font-family: "KaTeX Numbers";
+    src: url("KaTeX_Main-Regular.ttf");
+  }
+  
+</style>
+	</head>
+	
+	<!-- Cabeçalho do site -->
+
+	<body>
+		<header>
+			<div id="title">
+				<a href="../index.html">
+          <img id="logo" src="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
+        </a>
+			</div>
+		</header>
+
+    <!-- Barra de navegação que muda dependendo do tamanho da tela (não programei a responsividade ainda) -->
+    
+		<div class="sidenav">
+			<a id="funcao-afim" href="funcao-afim.html">Função afim</a>
+			<a id="funcao-quadratica" href="#">Função quadrática</a>
+			<a id="funcao-modular" href="#">Função modular</a> 
+			<a id="funcao-exponencial" href="#">Função exponecial</a>
+			<a id="funcao-logaritmica" href="#">Função logarítmica</a>
+		</div>
+
+    <!-- Pra fazer a barra, foi necessário colocá-la numa div aparte do conteúdo principal, que seria "main" -->
+    
+		<div class="main">
+		  <!-- Espaço pra informar os valores dos pontos P e Q para achar a função -->
+		  
+      <div id="function">
+        <h1>Coeficientes da função conhecidos dois pontos</h1>
+
+			  Digite os valores dos pontod $P$ e $Q$:
+			  <br>
+			  <br>
+		  	<label for="box-p">$P = ($</label>
+  			<input type="text" id="box-p" class="box2" placeholder="x₁, y₁" max-length="5"/>
+  			<label for="box-p">$)$</label>
+			
+  			<label for="box-q" style="margin-left: 5px;">$ Q = ($</label>
+	  		<input type="text" id="box-q" class="box2" placeholder="x₂, y₂" max-length="5"/>
+	  		<label for="box-q">$)$</label>
+      </div>
+			
+			<button id="function-btn">Calcular</button>
+			
+	  	<div id="paperAnswer">
+	  	  <h2>1. Coeficiente $a$ (inclinação):</h2>
+	  	  $$a = \frac{y_2 - y_1}{x_2 - x_1}$$
+	  	  <span id="step1"></span>
+	  	  <h2>2. Coeficiente $b$ (intercepto):</h2>
+	  	  Pegue um dos pontos (por exemplo, $P(x_1, y_1)$) e substitua na fórmula:
+	  	  <br>
+	  	  $$b = y_1 - a \cdot x_1$$
+	  	  <span id="step2"></span>
+	  	  <h2>3. Equação final:</h2>
+	  	  Com $a$ e $b$ a função afim será: 
+	  	  $$f(x) = ax + b$$
+	  	  <span id="step3"></span>
+	  	</div>
+			
+			<p id="sec-part"><a href="./funcao-afim.html">Gráfico da função conhecidos os coeficientes</a><i class="fa-solid fa-square-arrow-up-right" style= "color: #296B73; padding-left: 5px;"></i></p>
+			
+			<hr>
+			
+			<footer>
+        <p><a href="#">Sobre</a></p>
+        <p><a href="mailto:dangue612345@gmail.com">Contato</a></p>
+      </footer>
+		</div>
+
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		
+		<script type="module">
+		  import katex from "https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.mjs";
+		  
+		  let funcBtn = document.querySelector("#function-btn");
+		  
+		  funcBtn.onclick = function() {
+		    let pValues = document.querySelector("#box-p").value;
+		    let qValues = document.querySelector("#box-q").value;
+		    
+  		  document.querySelector("#box-p").value.includes(", ") ? pValues = document.querySelector("#box-p").value.split(", ") : pValues = document.querySelector("#box-p").value.split(",");
+  		  
+  		  document.querySelector("#box-q").value.includes(", ") ? qValues = document.querySelector("#box-q").value.split(", ") : qValues = document.querySelector("#box-q").value.split(",");
+  		  
+  		  let x1 = Number(pValues[0]); let x2 = Number(qValues[0]); let y1 = Number(pValues[1]); let y2 = Number(qValues[1]);
+  		  
+  		  const a = (y2 - y1) / (x2 - x1);
+        const b = y1 - a * x1;
+        
+        let aText;
+        
+        y1 < 0 ? aText = `a = \\frac{${y2} - (${y1})}{${x2} - ${x1}}` : aText = `a = \\frac{${y2} - ${y1}}{${x2} - ${x1}}`;
+        
+        katex.render(aText, step1, {
+          displayMode: true
+        });
+        
+        let bText;
+        
+        x1 < 0 ? bText = `b = ${y1} - ${a} \\cdot (${x1})` : bText = `b = ${y1} - ${a} \\cdot ${x1}`;
+      
+        katex.render(bText, step2, {
+          displayMode: true
+        });
+        
+        let cText;
+        
+        b < 0 ? cText = `f(x) = ${a}x + (${b})` : cText = `f(x) = ${a}x + ${b}`;
+        
+        katex.render(cText, step3, {
+          displayMode: true
+        });
+		  }
+		</script>
+		
+		<script src="script1.js"></script>
+	</body>
+</html>

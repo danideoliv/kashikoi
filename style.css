@@ -185,10 +185,10 @@ hr {
 }
 
 footer a {
-  color: #D8F2F0;
-  text-decoration-color: #B9D4D0;
+  color: white;
+  text-decoration: none;
 }
 
 footer a:visited {
-  color: #D8F2F0;
+  color: white;
 }
