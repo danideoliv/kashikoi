@@ -8,7 +8,6 @@ function dropdown() {
   visibility: visible;
   `;
 
-  const selectGrade = document.querySelector(".dropbtn");
   const dropContent = document.querySelector(".dropdown-content");
   const arrow = document.querySelector("#seta-baixo");
   const opacityBtn = document.querySelector("#btn-con");

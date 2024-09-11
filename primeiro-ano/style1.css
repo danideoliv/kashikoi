@@ -1,11 +1,15 @@
 @font-face {
-    font-family: "KaTeX";
-    src: url("KaTeX_Math-Regular.ttf");
+  font-family: "KaTeX Numbers";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/KaTeX_Main-Regular.ttf");
 }
 
 @font-face {
-    font-family: "KaTeX Numbers";
-    src: url("KaTeX_Main-Regular.ttf");
+  font-family: "KaTeX";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/KaTeX_Math-Regular.ttf");
 }
 
 body {
@@ -49,15 +53,15 @@ body {
   top: 40px;
 }
 
-.main > * {
+.main>* {
   margin: 15px 5%;
 }
 
-.main > p {
+.main>p {
   line-height: 30px;
 }
 
-.main > footer {
+.main>footer {
   position: absolute;
   width: 100%;
   margin: 0;
@@ -70,7 +74,7 @@ body {
   padding: 20px 0;
 }
 
-.main > hr {
+.main>hr {
   margin: 0;
 }
 
@@ -126,8 +130,7 @@ hr {
   border-right: 0;
 }
 
-::placeholder
-{
+::placeholder {
   color: white;
 }
 
@@ -147,6 +150,7 @@ hr {
   background-color: #F5F5F5;
   color: black;
   max-width: 700px;
+  display: inline-block;
 }
 
 #function {
@@ -164,8 +168,10 @@ hr {
   border-style: solid;
   background-color: #0F2D40;
   color: white;
+  display: block;
+  margin: auto;
 }
- 
+
 #function-btn:active {
   background-color: #194759;
 }
@@ -187,7 +193,7 @@ input {
 
 input::placeholder {
   text-align: center;
-  font-family: "KaTeX Numbers";
+  font-family: "KaTeX";
   font-size: 20px;
 }
 

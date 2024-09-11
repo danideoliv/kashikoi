@@ -1,258 +1,264 @@
 <!doctype html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Função Afim - Kashikoi</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-			rel="stylesheet"
-		/>
-		<link href="style1.css" rel="stylesheet" type="text/css" />
-		<link rel="icon" href="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
-		
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
-		
-		  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
-		
-		<script src="https://kit.fontawesome.com/6450feb693.js" crossorigin="anonymous"></script>
-		
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
 
-<!-- A parte abaixo é responsável por renderizar os textos matemáticos. Não me atrevo a mexer. Irei deixar os comentários originais do código-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Função Afim - Kashikoi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet" />
+  <link href="style1.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          // customised options
-          // • auto-render specific keys, e.g.:
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          // • rendering keys, e.g.:
-          throwOnError : false
-        });
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/6450feb693.js" crossorigin="anonymous"></script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+    crossorigin="anonymous"></script>
+
+  <!-- A parte abaixo é responsável por renderizar os textos matemáticos. Não me atrevo a mexer. Irei deixar os comentários originais do código-->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
     });
-</script>
+  </script>
 
-<style>
-  @font-face {
-    font-family: "KaTeX";
-    src: url("KaTeX_Math-Regular.ttf");
-}
+  <style>
+    @font-face {
+      font-family: "KaTeX Numbers";
+      font-style: normal;
+      font-weight: normal;
+      src: url("./fonts/KaTeX_Main-Regular.ttf");
+    }
 
-  @font-face {
-    font-family: "KaTeX Numbers";
-    src: url("KaTeX_Main-Regular.ttf");
-  }
-  
-</style>
-	</head>
-	
-	<!-- Cabeçalho do site -->
+    @font-face {
+      font-family: "KaTeX";
+      font-style: normal;
+      font-weight: normal;
+      src: url("./fonts/KaTeX_Math-Regular.ttf");
+    }
+  </style>
+</head>
 
-	<body>
-		<header>
-			<div id="title">
-				<a href="../index.html">
-          <img id="logo" src="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
-        </a>
-			</div>
-		</header>
+<!-- Cabeçalho do site -->
 
-    <!-- Barra de navegação que muda dependendo do tamanho da tela (não programei a responsividade ainda) -->
-    
-		<div class="sidenav">
-			<a id="funcao-afim" href="funcao-afim.html">Função afim</a>
-			<a id="funcao-quadratica" href="#">Função quadrática</a>
-			<a id="funcao-modular" href="#">Função modular</a> 
-			<a id="funcao-exponencial" href="#">Função exponecial</a>
-			<a id="funcao-logaritmica" href="#">Função logarítmica</a>
-		</div>
+<body>
+  <header>
+    <div id="title">
+      <a href="../index.html">
+        <img id="logo" src="https://i.postimg.cc/nLbFNj1S/kashikoi.png">
+      </a>
+    </div>
+  </header>
 
-    <!-- Pra fazer a barra, foi necessário colocá-la numa div aparte do conteúdo principal, que seria "main" -->
-    
-		<div class="main">
-		  
-		  <!-- Espaço pra informar os valores de a e b preenchendo a função -->
-		  
-      <div id="function">
-        <h1>Gráfico da função conhecidos os coeficientes</h1>
-			  Digite os valores de $a$ e $b$:<br><br>
-		  	<label for="box-a">$f(x)=$</label>
-  			<input type="text" id="box-a" class="box1" placeholder="a" max-length="5"/>
-			
-  			<label for="box-b">$x+$</label>
-	  		<input type="text" id="box-b" class="box1" placeholder="b" max-length="5"/>
-      </div>
-			
-			<button id="function-btn" onclick="calcFunc()">Calcular</button>
-			
-	  	<div id="graphics" style="width: 100%; max-width: 700px"></div>
-			
-			<p id="sec-part"><a href="./funcao-afim2.html">Coeficientes da função conhecidos dois pontos</a><i class="fa-solid fa-square-arrow-up-right" style= "color: #296B73; padding-left: 5px;"></i></p>
-			
-			<hr>
-			
-			<footer>
-        <p><a href="#">Sobre</a></p>
-        <p><a href="mailto:dangue612345@gmail.com">Contato</a></p>
-      </footer>
-		</div>
+  <!-- Barra de navegação que muda dependendo do tamanho da tela (não programei a responsividade ainda) -->
 
-		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <div class="sidenav">
+    <a id="funcao-afim" href="funcao-afim.html">Função afim</a>
+    <a id="funcao-quadratica" href="#">Função quadrática</a>
+    <a id="funcao-modular" href="#">Função modular</a>
+    <a id="funcao-exponencial" href="#">Função exponecial</a>
+    <a id="funcao-logaritmica" href="#">Função logarítmica</a>
+  </div>
 
-<script>
-          let afim = `-6*x+9`;
-        
-          let xValues = [];
-          let yValues = [];
-          for (let x = -20; x <= 20; x += 0.1) {
-            xValues.push(x);
-            yValues.push(eval(afim));
-          };
-          
-          let data = [{
-            x: xValues, 
-            y: yValues, 
-            mode: "lines",
-            line: {
-              color: "#3E8C84"
-            }
-          }];
-          
-          let layout = {
-            paper_bgcolor: "#0F2D40",
-            plot_bgcolor: "#FCFEFE",
-            title: {
-              text: "Exemplo: f(x) = - 6x + 9",
-              font: {
-                family: "KaTeX, KaTeX Numbers",
-                size: 20,
-                color: "white"
-              }
-            },
-            
-            xaxis: {
-                title: "Eixo x",
-                titlefont: {
-                  family: "KaTeX",
-                  color: "white"
-                },
-                mirror: "ticks",
-                gridcolor: "rgba(0, 0, 0, 0.3)",
-                zerolinecolor: "black",
-                tickfont: {
-                  color: "white"
-                },
-                linecolor: "#296B73",
-                linewidth: 4
-              },
-            yaxis: {
-              title: "Eixo y",
-              titlefont: {
-              family: "KaTeX",
-              color: "white",
-              },
-              mirror: "ticks",
-              gridcolor: "rgba(0, 0, 0, 0.3)",
-              zerolinecolor: "black",
-              tickfont: {
-                color: "white"
-              },
-              linecolor: "#296B73",
-              linewidth: 4
-            }
-          };
-          
-          Plotly.newPlot("graphics", data, layout, {scrollZoom: true}, {staticPlot: true});
-    
-    function calcFunc() {
-        aValue = document.getElementById("box-a").value;
-        bValue = document.getElementById("box-b").value;
-        
-        try {
-          let afim = `${aValue}*x+${bValue}`;
-        
-          const xValues = [];
-          const yValues = [];
-          for (let x = -20; x <= 20; x += 0.1) {
-            xValues.push(x);
-            yValues.push(eval(afim));
-          };
-          
-          const data = [{
-            x: xValues, 
-            y: yValues, 
-            mode: "lines",
-            line: {
-              color: "#3E8C84"
-            }
-          }];
-          
-          let formatA = aValue < 0 ? aValue.split("").join(" ") : aValue;
-          let formatB = bValue < 0 ? bValue.split("").join(" ") : `+ ${bValue}`;
-          let exp = `f(x) = ${formatA}x ${formatB}`;
-          
-          const layout = {
-            paper_bgcolor: "#0F2D40",
-            plot_bgcolor: "#FCFEFE",
-            title: {
-              text: exp,
-              font: {
-                family: "KaTeX, KaTeX Numbers",
-                size: 20,
-                color: "white"
-              }
-            },
-            
-            xaxis: {
-                title: "Eixo x",
-                titlefont: {
-                  family: "KaTeX",
-                  color: "white"
-                },
-                mirror: "ticks",
-                gridcolor: "rgba(0, 0, 0, 0.3)",
-                zerolinecolor: "#0F2D40",
-                tickfont: {
-                  color: "white"
-                },
-                linecolor: "#296B73",
-                linewidth: 4
-              },
-            yaxis: {
-              title: "Eixo y",
-              titlefont: {
-              family: "KaTeX",
-              color: "white",
-              },
-              mirror: "ticks",
-              gridcolor: "rgba(0, 0, 0, 0.3)",
-              zerolinecolor: "#0F2D40",
-              tickfont: {
-                color: "white"
-              },
-              linecolor: "#296B73",
-              linewidth: 4
-            }
-          };
-          
-          Plotly.newPlot("graphics", data, layout, {scrollZoom: true}, {staticPlot: true});
-        } catch(err) {
-          alert("Coloque apenas números. E lembre-se de não deixar espaços em branco!");
-        };
+  <!-- Pra fazer a barra, foi necessário colocá-la numa div aparte do conteúdo principal, que seria "main" -->
+
+  <div class="main">
+
+    <!-- Espaço pra informar os valores de a e b preenchendo a função -->
+
+    <div id="function">
+      <h1>Gráfico da função conhecidos os coeficientes</h1>
+      Digite os valores de $a$ e $b$:<br><br>
+      <label for="box-a">$f(x)=$</label>
+      <input type="text" id="box-a" class="box1" placeholder="a" max-length="5" />
+
+      <label for="box-b">$x+$</label>
+      <input type="text" id="box-b" class="box1" placeholder="b" max-length="5" />
+    </div>
+
+    <button id="function-btn" onclick="calcFunc()">Calcular</button>
+
+    <div id="graphics" style="width: 100%; max-width: 700px"></div>
+
+    <p id="sec-part"><a href="./funcao-afim2.html">Coeficientes da função conhecidos dois pontos</a><i
+        class="fa-solid fa-square-arrow-up-right" style="color: #296B73; padding-left: 5px;"></i></p>
+
+    <hr>
+
+    <footer>
+      <p><a href="#">Sobre</a></p>
+      <p><a href="mailto:dangue612345@gmail.com">Contato</a></p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <script>
+    let afim = `-6*x+9`;
+
+    let xValues = [];
+    let yValues = [];
+    for (let x = -20; x <= 20; x += 0.1) {
+      xValues.push(x);
+      yValues.push(eval(afim));
     };
-</script>
-		<script src="script1.js" type="module"></script>
-	</body>
+
+    let data = [{
+      x: xValues,
+      y: yValues,
+      mode: "lines",
+      line: {
+        color: "#3E8C84"
+      }
+    }];
+
+    let layout = {
+      paper_bgcolor: "#0F2D40",
+      plot_bgcolor: "#FCFEFE",
+      title: {
+        text: "Exemplo: f(x) = - 6x + 9",
+        font: {
+          family: "KaTeX, KaTeX Numbers",
+          size: 20,
+          color: "white"
+        }
+      },
+
+      xaxis: {
+        title: "Eixo x",
+        titlefont: {
+          family: "KaTeX",
+          color: "white"
+        },
+        mirror: "ticks",
+        gridcolor: "rgba(0, 0, 0, 0.3)",
+        zerolinecolor: "black",
+        tickfont: {
+          color: "white"
+        },
+        linecolor: "#296B73",
+        linewidth: 4
+      },
+      yaxis: {
+        title: "Eixo y",
+        titlefont: {
+          family: "KaTeX",
+          color: "white",
+        },
+        mirror: "ticks",
+        gridcolor: "rgba(0, 0, 0, 0.3)",
+        zerolinecolor: "black",
+        tickfont: {
+          color: "white"
+        },
+        linecolor: "#296B73",
+        linewidth: 4
+      }
+    };
+
+    Plotly.newPlot("graphics", data, layout, { scrollZoom: true }, { staticPlot: true });
+
+    function calcFunc() {
+      aValue = document.getElementById("box-a").value;
+      bValue = document.getElementById("box-b").value;
+
+      try {
+        let afim = `${aValue}*x+${bValue}`;
+
+        const xValues = [];
+        const yValues = [];
+        for (let x = -20; x <= 20; x += 0.1) {
+          xValues.push(x);
+          yValues.push(eval(afim));
+        };
+
+        const data = [{
+          x: xValues,
+          y: yValues,
+          mode: "lines",
+          line: {
+            color: "#3E8C84"
+          }
+        }];
+
+        let formatA = aValue < 0 ? aValue.split("").join(" ") : aValue;
+        let formatB = bValue < 0 ? bValue.split("").join(" ") : `+ ${bValue}`;
+        let exp = `f(x) = ${formatA}x ${formatB}`;
+
+        const layout = {
+          paper_bgcolor: "#0F2D40",
+          plot_bgcolor: "#FCFEFE",
+          title: {
+            text: exp,
+            font: {
+              family: "KaTeX, KaTeX Numbers",
+              size: 20,
+              color: "white"
+            }
+          },
+
+          xaxis: {
+            title: "Eixo x",
+            titlefont: {
+              family: "KaTeX",
+              color: "white"
+            },
+            mirror: "ticks",
+            gridcolor: "rgba(0, 0, 0, 0.3)",
+            zerolinecolor: "#0F2D40",
+            tickfont: {
+              color: "white"
+            },
+            linecolor: "#296B73",
+            linewidth: 4
+          },
+          yaxis: {
+            title: "Eixo y",
+            titlefont: {
+              family: "KaTeX",
+              color: "white",
+            },
+            mirror: "ticks",
+            gridcolor: "rgba(0, 0, 0, 0.3)",
+            zerolinecolor: "#0F2D40",
+            tickfont: {
+              color: "white"
+            },
+            linecolor: "#296B73",
+            linewidth: 4
+          }
+        };
+
+        Plotly.newPlot("graphics", data, layout, { scrollZoom: true }, { staticPlot: true });
+      } catch (err) {
+        alert("Coloque apenas números. E lembre-se de não deixar espaços em branco!");
+      };
+    };
+  </script>
+  <script src="script1.js" type="module"></script>
+</body>
+
 </html>

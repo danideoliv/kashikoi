@@ -25,20 +25,20 @@ header {
   z-index: 3;
 }
 
-.main > * {
+.main>* {
   margin: 15px 5%;
 }
 
-.main > p {
+.main>p {
   line-height: 30px;
   text-align: justify;
 }
 
-.main > hr {
+.main>hr {
   margin: 0;
 }
 
-.main > footer {
+.main>footer {
   width: 100%;
   position: absolute;
   margin: 0;
